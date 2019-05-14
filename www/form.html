@@ -6,26 +6,26 @@
     <script type="text/javascript" src="js/geturi.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var id_makanan = decodeURI(getUrlVars()["id_makanan"]);
-        var nama_makanan = decodeURI(getUrlVars()["nama_makanan"]);
+        var id_minuman = decodeURI(getUrlVars()["id_minuman"]);
+        var nama_minuman = decodeURI(getUrlVars()["nama_minuman"]);
         var harga = decodeURI(getUrlVars()["harga"]);
         var stok = decodeURI(getUrlVars()["stok"]);
         var id_penjual = decodeURI(getUrlVars()["id_penjual"]);
-        $("#id_makanan").val(id_makanan);
-        $("#nama_makanan").val(nama_makanan);
+        $("#id_minuman").val(id_minuman);
+        $("#nama_minuman").val(nama_minuman);
         $("#harga").val(harga);
         $("#stok").val(stok);
         $("#id_penjual").val(id_penjual);
         $("#update").click(function() {
-            var id_makanan = $("#id_makanan").val();
-            var nama_makanan = $("#nama_makanan").val();
+            var id_minuman = $("#id_minuman").val();
+            var nama_minuman = $("#nama_minuman").val();
             var harga = $("#harga").val();
             var stok = $("#stok").val();
             var id_penjual = $("#id_penjual").val();
-            var dataString = "id_makanan=" + id_makanan + "&nama_makanan=" + nama_makanan + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "&update=";
+            var dataString = "id_minuman=" + id_minuman + "&nama_minuman=" + nama_minuman + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "&update=";
             $.ajax({
                 type: "POST",
-                url: "https://turreted-worries.000webhostapp.com/appcordova/www/update.php",
+                url: "https://gieffaripkl.000webhostapp.com/uts/www/update.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -44,11 +44,11 @@
 
         });
         $("#delete").click(function() {
-            var id_makanan = $("#id_makanan").val();
-            var dataString = "id_makanan=" + id_makanan + "&delete=";
+            var id_minuman = $("#id_minuman").val();
+            var dataString = "id_minuman=" + id_minuman + "&delete=";
             $.ajax({
                 type: "GET",
-                url: "https://turreted-worries.000webhostapp.com/appcordova/www/delete.php",
+                url: "https://gieffaripkl.000webhostapp.com/uts/www/delete.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -79,10 +79,10 @@
     <br/>
     <br/>
     <div class="list">
-        <input type="hidden" id="id_makanan" value="" />
+        <input type="hidden" id="id_minuman" value="" />
         <div class="item">
-            <label>Nama Makanan</label>
-            <input type="text" id="nama_makanan" value="" />
+            <label>Nama Minuman</label>
+            <input type="text" id="nama_minuman" value="" />
         </div>
         <div class="item">
             <label>Harga</label>
