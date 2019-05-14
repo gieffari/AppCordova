@@ -5,16 +5,16 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var url = "https://turreted-worries.000webhostapp.com/appcordova/www/json.php";
+        var url = "https://gieffaripkl.000webhostapp.com/uts/www/json.php";
         $.getJSON(url, function(result) {
             console.log(result);
             $.each(result, function(i, field) {
-                var id_makanan = field.id_makanan;
-                var nama_makanan = field.nama_makanan;
+                var id_minuman = field.id_minuman;
+                var nama_minuman = field.nama_minuman;
                 var harga = field.harga;
                 var stok = field.stok;
                 var id_penjual = field.id_penjual;
-                $("#listview").append("<a class='item' href='form.html?id_makanan=" + id_makanan + "&nama_makanan=" + nama_makanan + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "'><h2>" + nama_makanan + " </h2><h2>" + harga + " </h2><h2>" + stok + "</h2><h2>" + id_penjual + "</h2></a>");
+                $("#listview").append("<a class='item' href='form.html?id_minuman=" + id_minuman + "&nama_minuman=" + nama_minuman + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "'><h2>" + nama_minuman + " </h2><h2>" + harga + " </h2><h2>" + stok + "</h2><h2>" + id_penjual + "</h2></a>");
             });
         });
     });
