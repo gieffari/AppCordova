@@ -6,15 +6,15 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $("#insert").click(function() {
-            var nama_makanan = $("#nama_makanan").val();
+            var nama_minuman = $("#nama_minuman").val();
             var harga = $("#harga").val();
             var stok = $("#stok").val();
             var id_penjual = $("#id_penjual").val();
-            var dataString = "nama_makanan=" + nama_makanan + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "&insert=";
-            if ($.trim(nama_makanan).length > 0 & $.trim(harga).length > 0 & $.trim(stok).length > 0 & $.trim(id_penjual).length > 0) {
+            var dataString = "nama_minuman=" + nama_minuman + "&harga=" + harga + "&stok=" + stok + "&id_penjual=" + id_penjual + "&insert=";
+            if ($.trim(nama_minuman).length > 0 & $.trim(harga).length > 0 & $.trim(stok).length > 0 & $.trim(id_penjual).length > 0) {
                 $.ajax({
                     type: "POST",
-                    url: "https://turreted-worries.000webhostapp.com/appcordova/www/insert.php",
+                    url: "https://gieffaripkl.000webhostapp.com/uts/www/insert.php",
                     data: dataString,
                     crossDomain: true,
                     cache: false,
@@ -45,10 +45,10 @@
     <br/>
     <br/>
     <div class="list">
-        <input type="hidden" id="id_makanan" value="" />
+        <input type="hidden" id="id_minuman" value="" />
         <div class="item">
-            <label>Nama Makanan</label>
-            <input type="text" id="nama_makanan" value="" />
+            <label>Nama minuman</label>
+            <input type="text" id="nama_minuman" value="" />
         </div>
         <div class="item">
             <label>Harga</label>
